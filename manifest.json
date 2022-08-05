@@ -1,0 +1,35 @@
+{
+  "name": "Węglowy pomocnik",
+  "description": "Automatycznie odswieża stronę przy wykazaniu błędu",
+  "version": "1.0",
+  "manifest_version": 3,
+    "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "action.html",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "host_permissions": ["https://*.sklep.pgg.pl/*"], /*<all_urls>*/
+  "permissions": ["webRequest", "tabs", "scripting", "activeTab"],
+  "background": {"service_worker": "background.js"},
+  "content_scripts": [
+      {
+            "matches": ["https://*.sklep.pgg.pl/*"],
+            "js": ["document_start.js"],
+            "run_at": "document_start"
+      }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["DOM.js"],
+    "matches": ["https://*.sklep.pgg.pl/*"]
+  }]
+}
