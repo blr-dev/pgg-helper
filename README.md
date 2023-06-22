@@ -1,2 +1,3 @@
 ### Dodatek do Chrome pomagający w zakupie węgla na oficjalnej stronie PGG
-#### Automatycznie odświeża każdą kartę jeśli tylko zostanie wykazany błąd połączenia bądź wyświetli się informacja o przekroczeniu ilości wejść na stronę
+#### - Automatycznie odświeża każdą kartę jeśli tylko zostanie wykazany błąd połączenia bądź wyświetli się informacja o przekroczeniu ilości wejść na stronę
+#### - Kod dopasowany do Chrome Manifest V3
